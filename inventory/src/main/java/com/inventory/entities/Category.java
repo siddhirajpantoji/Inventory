@@ -1,5 +1,7 @@
 package com.inventory.entities;
 
+import java.util.HashMap;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,4 +34,6 @@ public class Category extends BaseEntity {
 	private String longDescription;
 	
 	private String imageLocation;
+	
+	private HashMap<String,String> specs;
 }
