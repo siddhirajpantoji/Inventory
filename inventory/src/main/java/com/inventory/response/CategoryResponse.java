@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.inventory.constants.MessageConstants;
 import com.inventory.entities.Category;
 
 import lombok.Data;
@@ -22,5 +23,16 @@ public class CategoryResponse extends BaseResponse {
 	private List<Category> categories;
 	public CategoryResponse(HttpStatus status, String message) {
 		super(status, message);
-	}	
+	}
+	
+	public CategoryResponse(Category category) {
+		super(HttpStatus.OK, MessageConstants.EVERYTHING_LOOKS_GOOD);
+		this.category = category;
+	}
+	
+	public CategoryResponse(List<Category> categories) {
+		super(HttpStatus.OK, MessageConstants.EVERYTHING_LOOKS_GOOD);
+		this.categories = categories;
+	}
+	
 }

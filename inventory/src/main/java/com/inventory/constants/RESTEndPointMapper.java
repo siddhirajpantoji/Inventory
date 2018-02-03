@@ -7,4 +7,6 @@ package com.inventory.constants;
  */
 public class RESTEndPointMapper {
 	public static final String CATEGORY= "/category";
+//	public static final String ALL = "/all";
+	public static final String SINGLE_CATEGORY = "/{category-id}";
 }
